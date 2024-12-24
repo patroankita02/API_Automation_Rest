@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-24T00:34:30 IST" name="All Test Suite" finished-at="2024-12-24T00:34:37 IST" duration-ms="7009">
+    <groups>
+    </groups>
+    <test started-at="2024-12-24T00:34:30 IST" name="C:/AnkitaWorkspace/API_Framework" finished-at="2024-12-24T00:34:37 IST" duration-ms="7009">
+      <class name="api.testcases.UserTests">
+        <test-method is-config="true" signature="generateTestData()[pri:0, instance:api.testcases.UserTests@1817d444]" started-at="2024-12-24T00:34:31 IST" name="generateTestData" finished-at="2024-12-24T00:34:31 IST" duration-ms="120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateTestData -->
+        <test-method signature="createUser()[pri:1, instance:api.testcases.UserTests@1817d444]" started-at="2024-12-24T00:34:31 IST" name="createUser" finished-at="2024-12-24T00:34:33 IST" duration-ms="2408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method signature="getUserTest()[pri:2, instance:api.testcases.UserTests@1817d444]" started-at="2024-12-24T00:34:33 IST" name="getUserTest" finished-at="2024-12-24T00:34:34 IST" duration-ms="1149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserTest -->
+        <test-method signature="updateUserTest()[pri:3, instance:api.testcases.UserTests@1817d444]" started-at="2024-12-24T00:34:34 IST" name="updateUserTest" finished-at="2024-12-24T00:34:36 IST" duration-ms="2184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserTest -->
+        <test-method signature="deleteUserTest()[pri:4, instance:api.testcases.UserTests@1817d444]" started-at="2024-12-24T00:34:36 IST" name="deleteUserTest" finished-at="2024-12-24T00:34:37 IST" duration-ms="1116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUserTest -->
+      </class> <!-- api.testcases.UserTests -->
+    </test> <!-- C:/AnkitaWorkspace/API_Framework -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
