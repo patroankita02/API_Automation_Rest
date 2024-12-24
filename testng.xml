@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/AnkitaWorkspace/API_Framework"><classes><class name="api.testcases.UserTests"><methods><include name="createUser"/><include name="getUserTest"/><include name="updateUserTest"/><include name="deleteUserTest"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"  >
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+        <listener class-name="api.utilities.ExtentListenerClass"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="C:/AnkitaWorkspace/API_Framework">
+        <classes>
+            <class name="api.testcases.UserTests">
+        </class>
+        </classes>
+    </test>
+</suite>

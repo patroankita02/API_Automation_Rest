@@ -26,8 +26,6 @@ public class ReadExcelFile
         workBook = new XSSFWorkbook(inputStream);
         excelSheet= workBook.getSheet(sheetname);
         cell = workBook.getSheet(sheetname).getRow(rowNo).getCell(cellNo);
-//        workBook.close();;
-//        return cell.getStringCellValue();
         String cellValue;
 
         // Check the cell type

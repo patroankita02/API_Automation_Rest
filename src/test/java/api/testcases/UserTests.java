@@ -3,6 +3,9 @@ package api.testcases;
 import api.payload.User;
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -15,6 +18,9 @@ public class UserTests
     static Faker fake = new Faker();
     User testUser;
     String userName;
+    private static Logger logger = LogManager.getLogger(UserTests.class);
+
+
     @BeforeClass
     public void generateTestData()
     {
@@ -27,6 +33,9 @@ public class UserTests
         String phoneNumber = fake.phoneNumber().cellPhone();
         int userStatus = 1;
         testUser = new User(id,userName,firstname,lastName,email,password,phoneNumber,userStatus);
+        System.setProperty("log4j2.debug", "true");
+        Configurator.initialize(null, "C:\\AnkitaWorkspace\\API_Framework\\src\\test\\resources\\log4j.properties");
+       // logger = LogManager.getLogger("logs");
     }
 
     @Test (priority = 1)
@@ -34,6 +43,7 @@ public class UserTests
     {
         Response resp = postUser(testUser);
         Assert.assertEquals(resp.statusCode(),200);
+        logger.info("Create user logged");
 
     }
     @Test (priority = 2)
@@ -42,6 +52,7 @@ public class UserTests
         Response resp = getUser(userName);
         resp.then().log().all();
         Assert.assertEquals(resp.statusCode(),200);
+        logger.info("Get user logged");
 
     }
     @Test (priority = 3)
@@ -56,6 +67,7 @@ public class UserTests
         Assert.assertEquals(respUpdateUser.statusCode(),200);
         System.out.println("Updated user details  are  : ");
         respUpdateUser.then().log().all();
+        logger.info("Update user logged");
 
     }
     @Test (priority = 4)
@@ -64,6 +76,7 @@ public class UserTests
         Response resp = deleteUser(testUser.getUsername());
         resp.then().log().all();
         Assert.assertEquals(resp.statusCode(),200);
+        logger.info("Delete user logged");
 
     }
 
